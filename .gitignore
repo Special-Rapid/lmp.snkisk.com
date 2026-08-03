@@ -1,0 +1,15 @@
+/node_modules/
+/.vinext/
+/.wrangler/
+/dist/
+/assets/
+/docs/
+.DS_Store
+/public/
+/examples/
+/drizzle/
+/db/
+/build/
+/.openai/
+/work/
+/tests/
