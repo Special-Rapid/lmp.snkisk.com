@@ -37,6 +37,16 @@ export default function StatusPage() {
             <p>LegitilsとMirrorProxyは併用を推奨していますが、どちらも単体で使えます。</p>
           </Disclosure>
         </section>
+
+        <section className="roadmap" aria-labelledby="roadmap-title">
+          <p className="eyebrow">ROADMAP</p>
+          <h2 id="roadmap-title">今後のロードマップ</h2>
+          <ol>
+            <li><span>01</span>実機で検証</li>
+            <li><span>02</span>併用を確認</li>
+            <li><span>03</span>導入動線を検討</li>
+          </ol>
+        </section>
       </article>
       <Footer />
     </main>
