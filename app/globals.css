@@ -70,14 +70,14 @@ a { color: inherit; }
 .details-list ul { padding-left: 19px; }
 .details-list a { color: #fff; }
 .status-projects { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 62px; }
-.status-project { background: linear-gradient(#10182c, #10182c) padding-box, linear-gradient(115deg, rgba(34,115,255,.14), rgba(111,37,244,.68), rgba(235,18,192,.56), rgba(255,116,55,.48), rgba(34,115,255,.14)) border-box; background-size: 100% 100%, 280% 100%; border: 1px solid transparent; border-radius: 20px; padding: 25px; animation: status-border-shift 5s linear infinite; }
+.status-project { animation: status-border-flow 7s linear infinite; background: linear-gradient(#10182c, #10182c) padding-box, repeating-linear-gradient(90deg, rgba(34,115,255,.28) 0, rgba(111,37,244,.66) 26%, rgba(235,18,192,.56) 52%, rgba(255,116,55,.48) 76%, rgba(34,115,255,.28) 100%) border-box; background-position: 0 0, 0 0; background-size: 100% 100%, 360px 100%; border: 1px solid transparent; border-radius: 20px; padding: 25px; }
 .status-project .eyebrow { margin-bottom: 36px; }
 .status-project h2 { font-size: 33px; letter-spacing: -.06em; margin: 0 0 11px; }
 .status-project > p:not(.eyebrow) { color: #c6cede; font-size: 15px; line-height: 1.65; margin: 0; }
 .status-project .disclosure { border-top: 1px solid rgba(191,204,255,.14); margin-top: 26px; padding-top: 16px; }
 .status-project .disclosure-trigger { color: #f4f6ff; font-size: 14px; }
 .status-project .disclosure p { font-size: 14px; line-height: 1.75; margin: 15px 0 0; }
-@keyframes status-border-shift { from { background-position: 0 0, 0% 50%; } to { background-position: 0 0, 280% 50%; } }
+@keyframes status-border-flow { to { background-position: 0 0, -360px 0; } }
 .footer { align-items: center; border-top: 1px solid var(--line); color: #8994ad; display: grid; font-size: 12px; gap: 22px; grid-template-columns: 1fr auto auto; padding-bottom: 32px; padding-top: 29px; }
 .footer img { height: auto; max-width: 205px; width: 100%; }
 .footer p { margin: 0; }

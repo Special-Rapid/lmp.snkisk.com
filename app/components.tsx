@@ -19,8 +19,8 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="footer shell">
-      <Image src={brandAssets.wordmark} alt="MirrorProxy / Legitils" width={1140} height={180} unoptimized />
-      <p>© 2026 LMP.</p>
+      <Image src={brandAssets.lockup} alt="MirrorProxy / Legitils" width={1140} height={240} unoptimized />
+      <p>© 2026 MirrorProxy, Legitils, 新快速(Special-Rapid)</p>
       <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
     </footer>
   );
