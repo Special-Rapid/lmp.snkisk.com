@@ -71,23 +71,24 @@ a { color: inherit; }
 .details-list a { color: #fff; }
 .status-projects { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 62px; }
 .status-project { animation: status-border-flow 7s linear infinite; background: linear-gradient(#10182c, #10182c) padding-box, repeating-linear-gradient(90deg, rgba(34,115,255,.28) 0, rgba(111,37,244,.66) 26%, rgba(235,18,192,.56) 52%, rgba(255,116,55,.48) 76%, rgba(34,115,255,.28) 100%) border-box; background-position: 0 0, 0 0; background-size: 100% 100%, 360px 100%; border: 1px solid transparent; border-radius: 20px; padding: 25px; }
-.status-project .eyebrow { margin-bottom: 36px; }
-.status-project h2 { font-size: 33px; letter-spacing: -.06em; margin: 0 0 11px; }
-.status-project > p:not(.eyebrow) { color: #c6cede; font-size: 15px; line-height: 1.65; margin: 0; }
-.status-project .disclosure { border-top: 1px solid rgba(191,204,255,.14); margin-top: 26px; padding-top: 16px; }
-.status-project .disclosure-trigger { color: #f4f6ff; font-size: 14px; }
-.status-project .disclosure p { font-size: 14px; line-height: 1.75; margin: 15px 0 0; }
+.status-project .eyebrow { margin-bottom: 21px; }
+.status-project h2 { font-size: 33px; letter-spacing: -.06em; margin: 0; }
+.project-roadmap { list-style: none; margin: 30px 0 0; padding: 0; }
+.roadmap-stage { display: grid; gap: 16px; grid-template-columns: 42px minmax(0, 1fr); min-height: 79px; padding-bottom: 22px; position: relative; }
+.roadmap-stage:last-child { min-height: 42px; padding-bottom: 0; }
+.stage-marker { align-items: center; background: #10182c; border: 1px solid #72809c; border-radius: 999px; color: #c7d0e3; display: flex; font-size: 10px; font-weight: 800; height: 42px; justify-content: center; letter-spacing: .06em; position: relative; width: 42px; z-index: 1; }
+.roadmap-stage:not(:last-child) .stage-marker::after { background: rgba(170,184,217,.42); content: ""; height: calc(100% + 37px); left: 50%; position: absolute; top: 100%; transform: translateX(-50%); width: 1px; z-index: -1; }
+.stage-status { color: #91a1c1; font-size: 10px; font-weight: 800; letter-spacing: .12em; line-height: 1; margin: 3px 0 8px; }
+.roadmap-stage h3 { color: #dce4f4; font-size: 16px; letter-spacing: -.035em; line-height: 1.35; margin: 0; }
+.roadmap-stage.current .stage-marker { background: linear-gradient(#10182c, #10182c) padding-box, linear-gradient(135deg, #2273ff, #eb12c0, #ff7437) border-box; border: 2px solid transparent; color: #fff; }
+.roadmap-stage.current .stage-status { color: #ff82cf; }
+.roadmap-stage.current h3 { color: #fff; }
+.roadmap-stage.upcoming .stage-marker { border-color: rgba(115,130,160,.72); color: #91a0bc; }
+.roadmap-stage.upcoming .stage-status, .roadmap-stage.upcoming h3 { color: #8d9ab2; }
 @keyframes status-border-flow { to { background-position: 0 0, -360px 0; } }
-.roadmap { border-top: 1px solid var(--line); margin-top: 68px; padding-top: 27px; }
-.roadmap .eyebrow { margin-bottom: 12px; }
-.roadmap h2 { font-size: clamp(26px, 3vw, 36px); letter-spacing: -.06em; margin: 0; }
-.roadmap ol { display: grid; gap: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; margin: 28px 0 0; padding: 0; }
-.roadmap li { border-top: 1px solid rgba(191,204,255,.14); color: #d9dfef; font-size: 15px; font-weight: 800; padding: 17px 18px 0 0; }
-.roadmap li + li { padding-left: 18px; padding-right: 0; }
-.roadmap span { color: #8e9bbb; display: block; font-size: 10px; letter-spacing: .14em; margin-bottom: 9px; }
 .footer { align-items: center; border-top: 1px solid var(--line); color: #8994ad; display: grid; font-size: 12px; gap: 22px; grid-template-columns: 1fr auto auto; padding-bottom: 32px; padding-top: 29px; }
 .footer img { height: auto; max-width: 205px; width: 100%; }
 .footer p { margin: 0; }
 .footer a { color: #b9c2d8; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) { .disclosure-icon, .disclosure-panel, .disclosure-body { transition: none; } .status-project { animation: none; } }
-@media (max-width: 760px) { .shell { padding-left: 20px; padding-right: 20px; } .site-header { padding-bottom: 13px; padding-top: 13px; } .brand img { height: auto; width: 174px; } .nav-links { gap: 14px; } .nav-links a { font-size: 12px; } .hero { min-height: 660px; } .hero-content { padding-bottom: 82px; padding-top: 120px; } .hero-logo { margin-bottom: 27px; max-width: 450px; } .hero h1, .detail-page h1 { font-size: clamp(42px, 12vw, 62px); } .projects { padding-bottom: 82px; padding-top: 82px; } .project-grid, .quiet-panel, .status-projects, .roadmap ol { grid-template-columns: 1fr; } .project-card { min-height: 260px; } .quiet-panel { align-items: start; padding-bottom: 40px; padding-top: 40px; } .detail-page { padding-bottom: 80px; padding-top: 119px; } .details-list { margin-top: 50px; } .roadmap li, .roadmap li + li { padding-left: 0; padding-right: 0; } .footer { grid-template-columns: 1fr; } .footer img { max-width: 235px; } }
+@media (max-width: 760px) { .shell { padding-left: 20px; padding-right: 20px; } .site-header { padding-bottom: 13px; padding-top: 13px; } .brand img { height: auto; width: 174px; } .nav-links { gap: 14px; } .nav-links a { font-size: 12px; } .hero { min-height: 660px; } .hero-content { padding-bottom: 82px; padding-top: 120px; } .hero-logo { margin-bottom: 27px; max-width: 450px; } .hero h1, .detail-page h1 { font-size: clamp(42px, 12vw, 62px); } .projects { padding-bottom: 82px; padding-top: 82px; } .project-grid, .quiet-panel, .status-projects { grid-template-columns: 1fr; } .project-card { min-height: 260px; } .quiet-panel { align-items: start; padding-bottom: 40px; padding-top: 40px; } .detail-page { padding-bottom: 80px; padding-top: 119px; } .details-list { margin-top: 50px; } .footer { grid-template-columns: 1fr; } .footer img { max-width: 235px; } }
