@@ -25,10 +25,7 @@ export default function Home() {
       </section>
 
       <section className="projects shell" id="projects" aria-labelledby="projects-title">
-        <div className="section-heading compact-heading">
-          <p className="eyebrow">PROJECTS</p>
-          <h2 id="projects-title">知りたい方から、開く。</h2>
-        </div>
+        <h2 className="sr-only" id="projects-title">プロジェクト</h2>
         <div className="project-grid">
           <a className="project-card legitils-card" href="/legitils">
             <span className="status alpha">ALPHA</span>

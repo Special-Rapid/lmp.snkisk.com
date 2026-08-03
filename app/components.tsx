@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="site-header shell">
       <a className="brand" href="/" aria-label="LMP トップへ">
-        <Image src={brandAssets.mark} alt="" width={50} height={50} unoptimized />
+        <Image src={brandAssets.lockup} alt="MirrorProxy / Legitils" width={238} height={50} unoptimized />
       </a>
       <nav className="nav-links" aria-label="メインナビゲーション">
         <a href="/#projects">Projects</a>

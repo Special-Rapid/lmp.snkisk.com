@@ -13,20 +13,28 @@ export default function StatusPage() {
         <h1>現在の対応状況</h1>
         <p className="detail-lead">完成済みの統合インストーラーではありません。確認できている範囲だけを掲載しています。</p>
 
-        <section className="details-list" aria-label="対応状況の詳細">
-          <Disclosure defaultOpen title="対象環境">
-            <dl className="status-grid">
-              <div><dt>GAME</dt><dd>Minecraft 1.8.9</dd></div>
-              <div><dt>CLIENT</dt><dd>Lunar Clientを対象に開発</dd></div>
-              <div><dt>macOS</dt><dd>主な導入・起動導線として開発中</dd></div>
-              <div><dt>WINDOWS / LINUX</dt><dd>個人での導入は可能。公式導線は未定</dd></div>
-            </dl>
-          </Disclosure>
+        <section className="status-projects" aria-label="プロジェクト別の対応状況">
+          <section className="status-project legitils-status">
+            <p className="eyebrow">LEGITILS / ALPHA</p>
+            <h2>Legitils</h2>
+            <p>Minecraft 1.8.9とLunar Clientを対象に開発しています。</p>
+            <Disclosure defaultOpen title="確認中の範囲">
+              <p>実機互換性と、Cheater Detectの各シグナル精度を継続して検証しています。</p>
+            </Disclosure>
+          </section>
+          <section className="status-project mirrorproxy-status">
+            <p className="eyebrow">MIRRORPROXY / BUILDING</p>
+            <h2>MirrorProxy</h2>
+            <p>macOSを主な導入・起動導線として開発しています。</p>
+            <Disclosure defaultOpen title="対応環境と導入">
+              <p>Windows/Linuxでも個人での導入は可能です。公式導入動線は未定で、実クライアント互換性と対応範囲を継続して検証しています。</p>
+            </Disclosure>
+          </section>
+        </section>
+
+        <section className="details-list" aria-label="共通の対応状況">
           <Disclosure title="併用について">
             <p>LegitilsとMirrorProxyは併用を推奨していますが、どちらも単体で使えます。</p>
-          </Disclosure>
-          <Disclosure title="開発中の範囲">
-            <p>Legitilsの実機互換性・各シグナルの精度、MirrorProxyの実クライアント互換性と対応範囲を継続して検証しています。</p>
           </Disclosure>
         </section>
       </article>
