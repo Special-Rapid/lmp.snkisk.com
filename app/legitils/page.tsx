@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Footer, Header } from "../components";
+import { Disclosure } from "../disclosure";
 
 export const metadata: Metadata = { title: "Legitils" };
 
@@ -14,22 +15,19 @@ export default function LegitilsPage() {
         <a className="button primary" href="https://github.com/Special-Rapid/Legitils" target="_blank" rel="noreferrer">GitHubで見る <span aria-hidden="true">↗</span></a>
 
         <section className="details-list" aria-label="Legitilsの詳細">
-          <details open>
-            <summary>できること</summary>
+          <Disclosure defaultOpen title="できること">
             <ul>
               <li>不正の可能性に注意を向けるCheater Detect</li>
               <li>Party参加・離脱通知など、Bed Wars向けQoL</li>
               <li>観測結果と設定を端末内に保存</li>
             </ul>
-          </details>
-          <details>
-            <summary>Cheater Detectについて</summary>
+          </Disclosure>
+          <Disclosure title="Cheater Detectについて">
             <p>通知は注意を促すシグナルであり、不正を断定するものではありません。</p>
-          </details>
-          <details>
-            <summary>対応状況</summary>
+          </Disclosure>
+          <Disclosure title="対応状況">
             <p>Minecraft 1.8.9、Lunar Clientを対象に開発しています。詳しい対応範囲は<a href="/status">対応状況</a>をご覧ください。</p>
-          </details>
+          </Disclosure>
         </section>
       </article>
       <Footer />

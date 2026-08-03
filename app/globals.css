@@ -8,7 +8,7 @@ body { background: var(--background); color: var(--foreground); font-family: Ari
 a { color: inherit; }
 .shell { margin: 0 auto; max-width: 1100px; padding-left: 32px; padding-right: 32px; }
 .site-header { align-items: center; display: flex; justify-content: space-between; padding-bottom: 25px; padding-top: 25px; position: relative; z-index: 2; }
-.brand { align-items: center; display: inline-flex; font-size: 19px; font-weight: 800; gap: 9px; letter-spacing: -.04em; text-decoration: none; }
+.brand { display: inline-flex; line-height: 0; text-decoration: none; }
 .brand img { display: block; }
 .nav-links { display: flex; gap: 22px; }
 .nav-links a { color: #c9d1e4; font-size: 13px; text-decoration: none; }
@@ -25,11 +25,15 @@ a { color: inherit; }
 .primary:hover { background: #fff; }
 .secondary { border: 1px solid rgba(230,236,255,.28); color: #f7f9ff; }
 .secondary:hover { border-color: rgba(230,236,255,.64); }
+.disclosure { color: #c6cede; }
+.disclosure-trigger { align-items: center; background: transparent; border: 0; color: inherit; cursor: pointer; display: flex; font: inherit; font-weight: 800; justify-content: space-between; padding: 0; text-align: left; width: 100%; }
+.disclosure-icon { color: #94a3c5; font-size: 23px; font-weight: 400; line-height: .7; transition: transform .18s ease; }
+.disclosure.is-open .disclosure-icon { transform: rotate(45deg); }
+.disclosure-panel { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .18s ease, opacity .14s ease; }
+.disclosure-body { min-height: 0; overflow: hidden; transform: translateY(-8px); transition: transform .18s ease; }
+.disclosure.is-open .disclosure-panel { grid-template-rows: 1fr; opacity: 1; }
+.disclosure.is-open .disclosure-body { transform: translateY(0); }
 .quick-read { border-top: 1px solid var(--line); color: #b8c1d5; margin-top: 48px; max-width: 610px; padding-top: 17px; }
-summary { cursor: pointer; font-weight: 800; list-style: none; }
-summary::-webkit-details-marker { display: none; }
-summary::after { color: #94a3c5; content: "+"; float: right; font-size: 21px; font-weight: 400; line-height: .7; }
-details[open] summary::after { content: "−"; }
 .quick-read p { font-size: 14px; line-height: 1.75; margin: 17px 0 0; }
 .hero-glow { border-radius: 999px; filter: blur(12px); opacity: .42; position: absolute; }
 .glow-one { background: #3523f7; height: 380px; right: -150px; top: 50px; width: 380px; }
@@ -59,8 +63,8 @@ details[open] summary::after { content: "−"; }
 .detail-page { max-width: 860px; min-height: calc(100vh - 180px); padding-bottom: 110px; padding-top: 92px; }
 .detail-lead { color: #c5cde0; font-size: clamp(19px, 2.5vw, 25px); letter-spacing: -.03em; line-height: 1.45; margin: 29px 0 37px; max-width: 650px; }
 .details-list { border-top: 1px solid var(--line); margin-top: 70px; }
-.details-list details { border-bottom: 1px solid var(--line); color: #c6cede; padding: 22px 0; }
-.details-list summary { color: #f4f6ff; font-size: clamp(19px, 2.2vw, 25px); letter-spacing: -.04em; }
+.details-list .disclosure { border-bottom: 1px solid var(--line); padding: 22px 0; }
+.details-list .disclosure-trigger { color: #f4f6ff; font-size: clamp(19px, 2.2vw, 25px); letter-spacing: -.04em; }
 .details-list p, .details-list ul { font-size: 15px; line-height: 1.8; margin: 18px 32px 2px 0; }
 .details-list ul { padding-left: 19px; }
 .details-list a { color: #fff; }
@@ -73,4 +77,5 @@ details[open] summary::after { content: "−"; }
 .footer img { height: auto; max-width: 205px; width: 100%; }
 .footer p { margin: 0; }
 .footer a { color: #b9c2d8; text-decoration: none; }
+@media (prefers-reduced-motion: reduce) { .disclosure-icon, .disclosure-panel, .disclosure-body { transition: none; } }
 @media (max-width: 760px) { .shell { padding-left: 20px; padding-right: 20px; } .nav-links { gap: 14px; } .nav-links a { font-size: 12px; } .hero { min-height: 660px; } .hero-content { padding-bottom: 82px; padding-top: 62px; } .hero-logo { margin-bottom: 27px; max-width: 450px; } .hero h1, .detail-page h1 { font-size: clamp(42px, 12vw, 62px); } .projects { padding-bottom: 82px; padding-top: 82px; } .project-grid, .quiet-panel, .status-grid { grid-template-columns: 1fr; } .project-card { min-height: 260px; } .quiet-panel { align-items: start; padding-bottom: 40px; padding-top: 40px; } .detail-page { padding-bottom: 80px; padding-top: 60px; } .details-list { margin-top: 50px; } .status-grid div:nth-child(even) { padding-left: 0; } .footer { grid-template-columns: 1fr; } .footer img { max-width: 235px; } }

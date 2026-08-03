@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Footer, Header } from "./components";
+import { Disclosure } from "./disclosure";
 import { brandAssets, contactEmail } from "./site";
 
 export default function Home() {
@@ -10,7 +11,6 @@ export default function Home() {
         <div className="hero-glow glow-one" />
         <div className="hero-glow glow-two" />
         <div className="shell hero-content">
-          <p className="eyebrow">DEVELOPMENT PREVIEW</p>
           <Image className="hero-logo" src={brandAssets.lockup} alt="MirrorProxy / Legitils" width={1140} height={240} priority unoptimized />
           <h1 id="hero-title">Legitを貫く。<br />もっと見やすく、<br />もっと自分らしく。</h1>
           <p className="hero-copy">LegitilsとMirrorProxy。Bed Warsのための、ふたつのローカルツール。</p>
@@ -18,10 +18,9 @@ export default function Home() {
             <a className="button primary" href="#projects">プロジェクトを見る</a>
             <a className="button secondary" href="/status">対応状況</a>
           </div>
-          <details className="quick-read">
-            <summary>LMPについて</summary>
+          <Disclosure className="quick-read" title="LMPについて">
             <p>Legitilsは試合の変化を見つけ、MirrorProxyは自分の画面に見える情報を整えます。併用を推奨していますが、どちらも単体で使えます。</p>
-          </details>
+          </Disclosure>
         </div>
       </section>
 

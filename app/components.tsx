@@ -5,8 +5,7 @@ export function Header() {
   return (
     <header className="site-header shell">
       <a className="brand" href="/" aria-label="LMP トップへ">
-        <Image src={brandAssets.mark} alt="" width={32} height={32} unoptimized />
-        <span>LMP</span>
+        <Image src={brandAssets.mark} alt="" width={50} height={50} unoptimized />
       </a>
       <nav className="nav-links" aria-label="メインナビゲーション">
         <a href="/#projects">Projects</a>
@@ -21,7 +20,7 @@ export function Footer() {
   return (
     <footer className="footer shell">
       <Image src={brandAssets.wordmark} alt="MirrorProxy / Legitils" width={1140} height={180} unoptimized />
-      <p>© 2026 LMP. Development Preview.</p>
+      <p>© 2026 LMP.</p>
       <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
     </footer>
   );

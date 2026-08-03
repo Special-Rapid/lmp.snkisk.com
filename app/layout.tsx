@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     template: "%s | LMP",
   },
   description:
-    "LegitilsとMirrorProxyの公式Development Preview。Bed Warsのためのローカルツールセット。",
+    "LegitilsとMirrorProxy。Bed Warsのためのローカルツールセット。",
   icons: {
-    icon: "https://images.snkisk.com/lmp.snkisk.com/images/20da28da-6c26-4ae0-a0ba-9e320e3e0730.svg",
-    shortcut: "https://images.snkisk.com/lmp.snkisk.com/images/20da28da-6c26-4ae0-a0ba-9e320e3e0730.svg",
+    icon: "https://images.snkisk.com/lmp.snkisk.com/images/85b94573-797d-472c-b8c3-e8acde115ad4.svg",
+    shortcut: "https://images.snkisk.com/lmp.snkisk.com/images/85b94573-797d-472c-b8c3-e8acde115ad4.svg",
   },
   openGraph: {
     title: "LMP — Legitils + MirrorProxy",
