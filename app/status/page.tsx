@@ -23,7 +23,7 @@ const legitilsRoadmapStages: RoadmapStage[] = [
 
 const mirrorProxyRoadmapStages: RoadmapStage[] = [
   { title: "プロキシ機能実装", state: "complete", status: "完了" },
-  { title: "ログイン情報取得", state: "upcoming", status: "予定" },
+  { title: "ログイン情報取得", state: "current", status: "現在" },
   { title: "操作command実装", state: "complete", status: "完了" },
   { title: "network level並びにBedwars starの値置き換え実装", state: "complete", status: "完了" },
   { title: "cape置き換え実装", state: "upcoming", status: "予定" },
