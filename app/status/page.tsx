@@ -14,7 +14,7 @@ const legitilsRoadmapStages: RoadmapStage[] = [
   { title: "Lunar Clientとの互換性の確保", state: "complete", status: "完了" },
   { title: "操作Commandの実装", state: "complete", status: "完了" },
   { title: "Bed Wars QoL機能の実装", state: "current", status: "現在" },
-  { title: "Mac appの作成", state: "upcoming", status: "予定" },
+  { title: "Mac appの作成", state: "complete", status: "完了" },
   { title: "製品レビュー", state: "upcoming", status: "予定" },
   { title: "最終調整", state: "upcoming", status: "予定" },
   { title: "リリース", state: "upcoming", status: "予定" },
@@ -42,7 +42,13 @@ function ProjectRoadmap({ name, state, stages }: { name: string; state: "ALPHA" 
       <ol className="project-roadmap" aria-label={`${name}の開発ロードマップ`}>
         {stages.map((stage, index) => (
           <li className={`roadmap-stage ${stage.state}`} key={stage.title}>
-            <span className="stage-marker" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+            <span className="stage-marker" aria-hidden="true">
+              {stage.state === "complete" ? (
+                <svg className="stage-check" viewBox="0 0 24 24">
+                  <path d="m5 12 4.5 4.5L19 7" />
+                </svg>
+              ) : String(index + 1).padStart(2, "0")}
+            </span>
             <div>
               <p className="stage-status">{stage.status}</p>
               <h3>{stage.title}</h3>

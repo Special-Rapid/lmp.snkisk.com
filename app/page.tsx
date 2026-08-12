@@ -19,7 +19,7 @@ export default function Home() {
             <a className="button secondary" href="/status">対応状況</a>
           </div>
           <Disclosure className="quick-read" title="LMPについて">
-            <p>Legitilsは試合の変化を見つけ、MirrorProxyは自分の画面に見える情報を整えます。併用を推奨していますが、どちらも単体で使えます。</p>
+            <p>LegitilsはLunar Client向けの多機能MOD。MirrorProxyはBadlion・Vanillaなど、Lunar Client以外で使うためのローカルプロキシです。</p>
           </Disclosure>
         </div>
       </section>
@@ -30,13 +30,13 @@ export default function Home() {
           <a className="project-card legitils-card" href="/legitils">
             <span className="status alpha">ALPHA</span>
             <h3>Legitils</h3>
-            <p>Cheater DetectとBed Wars QoLのためのMOD。</p>
+            <p>Lunar Client向け。Cheater DetectとBed Wars QoLをまとめた多機能MOD。</p>
             <span className="card-action">Legitilsについて <b aria-hidden="true">→</b></span>
           </a>
           <a className="project-card proxy-card" href="/mirrorproxy">
             <span className="status building">BUILDING</span>
             <h3>MirrorProxy</h3>
-            <p>Nickのような見た目のカスタマイズを、自分の画面だけで。</p>
+            <p>Badlion・Vanillaなど、Lunar Client以外で使うためのローカルプロキシ。</p>
             <span className="card-action">MirrorProxyについて <b aria-hidden="true">→</b></span>
           </a>
         </div>
